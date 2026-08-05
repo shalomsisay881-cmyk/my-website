@@ -2,8 +2,11 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Jerry Design | Tradition Reimagined. Freedom Redefined.</title>
+    <meta name="description" content="Jerry Design - 100% pure organic cotton Habesha dresses, tops, and kids wear. Tradition reimagined and freedom redefined in Addis Ababa, Ethiopia.">
+    <meta name="keywords" content="Jerry Design, Jerry, Design, Habesha, Ethiopia, Kamis, Habesha kemis, Habesha libs, Dress, kids dress, Addis Ababa">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -65,19 +68,23 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Mobile touch responsiveness helper */
+        button, a {
+            touch-action: manipulation;
+        }
     </style>
 </head>
 <body class="bg-pearl text-charcoal font-sans overflow-x-hidden">
 
     <header class="sticky top-0 z-50 bg-pearl/95 backdrop-blur-md border-b border-charcoal/10 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <!-- Brand Logo Frame -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 sm:h-24 flex items-center justify-between">
+            <!-- Brand Logo Frame (Zoomed in logo) -->
             <a href="#" onclick="navigateTo('home')" class="flex items-center gap-3 tracking-widest text-left group">
-                <div class="w-14 h-14 rounded-full overflow-hidden border border-brandYellow/30 p-0.5 bg-charcoal flex items-center justify-center transition-transform duration-500 group-hover:rotate-12 shadow-lg">
-                    <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="Jerry Design Logo" class="w-full h-full object-cover object-center scale-110 rounded-full" onerror="this.src='https://placehold.co/100x100/1e1a17/f2a900?text=JD'">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border border-brandYellow/30 p-0.5 bg-charcoal flex items-center justify-center transition-transform duration-500 group-hover:rotate-12 shadow-lg">
+                    <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="Jerry Design Logo" class="w-full h-full object-cover object-center scale-150 rounded-full" onerror="this.src='https://placehold.co/100x100/1e1a17/f2a900?text=JD'">
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-semibold text-base sm:text-lg tracking-[0.15em] uppercase text-charcoal group-hover:text-brandRed transition-colors">
+                    <span class="font-semibold text-sm sm:text-lg tracking-[0.15em] uppercase text-charcoal group-hover:text-brandRed transition-colors">
                         <span class="font-serif italic text-brandRed font-bold not-uppercase normal-case">J</span>erry <span class="text-brandYellow font-bold">D</span>esign
                     </span>
                     <span class="font-serif text-[9px] italic text-charcoal/70 tracking-wider">Tradition Reimagined</span>
@@ -100,32 +107,32 @@
             </div>
 
             <!-- Mobile Hamburger Menu Button -->
-            <button class="md:hidden text-charcoal focus:outline-none" id="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <button class="md:hidden text-charcoal p-2 focus:outline-none" id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Mobile Menu">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full bg-pearl border-b border-charcoal/15 flex-col px-8 py-10 space-y-6 text-sm tracking-widest uppercase font-semibold shadow-xl transition-all duration-300 z-50">
-            <a href="#" onclick="navigateTo('home'); toggleMobileMenu()" class="block text-charcoal py-2 border-b border-charcoal/5">Home</a>
-            <a href="#" onclick="navigateTo('catalog'); toggleMobileMenu()" class="block text-charcoal py-2 border-b border-charcoal/5">Catalog</a>
-            <a href="#" onclick="navigateTo('story'); toggleMobileMenu()" class="block text-charcoal py-2 border-b border-charcoal/5">Our Story</a>
-            <a href="#" onclick="navigateTo('locations'); toggleMobileMenu()" class="block text-charcoal py-2 border-b border-charcoal/5">Find us</a>
+        <div id="mobile-menu" class="hidden absolute top-20 sm:top-24 left-0 w-full bg-pearl border-b border-charcoal/15 flex-col px-6 sm:px-8 py-8 space-y-5 text-sm tracking-widest uppercase font-semibold shadow-2xl transition-all duration-300 z-50">
+            <a href="#" onclick="navigateTo('home'); toggleMobileMenu()" class="block text-charcoal py-3 border-b border-charcoal/5">Home</a>
+            <a href="#" onclick="navigateTo('catalog'); toggleMobileMenu()" class="block text-charcoal py-3 border-b border-charcoal/5">Catalog</a>
+            <a href="#" onclick="navigateTo('story'); toggleMobileMenu()" class="block text-charcoal py-3 border-b border-charcoal/5">Our Story</a>
+            <a href="#" onclick="navigateTo('locations'); toggleMobileMenu()" class="block text-charcoal py-3 border-b border-charcoal/5">Find us</a>
             <div class="pt-4 flex flex-col gap-3">
-                <a href="https://wa.me/251911698369" target="_blank" class="w-full text-center py-3 bg-[#25D366] text-white text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry
+                <a href="https://wa.me/251911698369" target="_blank" class="w-full text-center py-3.5 bg-[#25D366] text-white text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2 rounded shadow">
+                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Inquiry
                 </a>
-                <a href="https://t.me/Jerryeyerus23" target="_blank" class="w-full text-center py-3 bg-[#229ED9] text-white text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-telegram"></i> Telegram (@Jerryeyerus23)
+                <a href="https://t.me/Jerryeyerus23" target="_blank" class="w-full text-center py-3.5 bg-[#229ED9] text-white text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2 rounded shadow">
+                    <i class="fa-brands fa-telegram text-base"></i> Telegram (@Jerryeyerus23)
                 </a>
-                <a href="https://www.instagram.com/jerrydrsign23" target="_blank" class="w-full text-center py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-yellow-500 text-white text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-instagram"></i> Instagram (@jerrydrsign23)
+                <a href="https://www.instagram.com/jerrydrsign23" target="_blank" class="w-full text-center py-3.5 bg-gradient-to-r from-purple-600 via-pink-600 to-yellow-500 text-white text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2 rounded shadow">
+                    <i class="fa-brands fa-instagram text-base"></i> Instagram (@jerrydrsign23)
                 </a>
-                <a href="https://www.tiktok.com/@jerrydesign23" target="_blank" class="w-full text-center py-3 bg-black text-white text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-tiktok"></i> TikTok (@jerrydesign23)
+                <a href="https://www.tiktok.com/@jerrydesign23" target="_blank" class="w-full text-center py-3.5 bg-black text-white text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2 rounded shadow">
+                    <i class="fa-brands fa-tiktok text-base"></i> TikTok (@jerrydesign23)
                 </a>
-                <a href="https://www.facebook.com/share/1KHJpxtdQ5/" target="_blank" class="w-full text-center py-3 bg-[#1877F2] text-white text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-facebook"></i> Facebook Page
+                <a href="https://www.facebook.com/share/1KHJpxtdQ5/" target="_blank" class="w-full text-center py-3.5 bg-[#1877F2] text-white text-xs tracking-widest uppercase font-semibold flex items-center justify-center gap-2 rounded shadow">
+                    <i class="fa-brands fa-facebook text-base"></i> Facebook Page
                 </a>
             </div>
         </div>
@@ -135,51 +142,51 @@
 
         <!-- PAGE 1: HOME PAGE -->
         <div id="view-home" class="page-view active">
-            <section class="relative min-h-[calc(100vh-96px)] flex flex-col lg:flex-row items-center justify-between border-b border-charcoal/10 overflow-hidden bg-charcoal">
+            <section class="relative min-h-[calc(100vh-80px)] sm:min-h-[calc(100vh-96px)] flex flex-col lg:flex-row items-center justify-between border-b border-charcoal/10 overflow-hidden bg-charcoal">
                 
                 <!-- Left Editorial Text Area -->
-                <div class="w-full lg:w-1/2 p-8 sm:p-12 md:p-20 flex flex-col justify-center z-10 text-pearl">
-                    <span class="inline-block px-3 py-1.5 bg-brandRed text-pearl font-semibold text-[10px] tracking-[0.25em] uppercase w-max mb-6">100% PREMIUM COTTON</span>
+                <div class="w-full lg:w-1/2 p-6 sm:p-12 md:p-20 flex flex-col justify-center z-10 text-pearl">
+                    <span class="inline-block px-3 py-1.5 bg-brandRed text-pearl font-semibold text-[10px] tracking-[0.25em] uppercase w-max mb-6">100% PREMIUM COTTON • ADDIS ABABA DELIVERY AVAILABLE</span>
                     
-                    <h1 class="font-serif italic text-4xl sm:text-5xl lg:text-7xl leading-tight tracking-tight mb-6">
+                    <h1 class="font-serif italic text-3xl sm:text-5xl lg:text-7xl leading-tight tracking-tight mb-6">
                         Tradition <br class="hidden sm:inline">
                         <span class="font-sans font-bold not-italic tracking-widest text-brandYellow uppercase">Reimagined.</span> <br>
                         Freedom <br class="hidden sm:inline">
                         <span class="font-sans font-bold not-italic tracking-widest text-brandRed uppercase">Redefined.</span>
                     </h1>
                     
-                    <p class="font-serif text-pearl/80 text-sm sm:text-base leading-relaxed max-w-lg mb-10">
-                        Handcrafted modern Habesha tops, dresses, and everyday essentials made from 100% pure cotton. Designed for personal freedom, blending traditional hand-loomed patterns with lightweight silhouettes.
+                    <p class="font-serif text-pearl/80 text-sm sm:text-base leading-relaxed max-w-lg mb-8 sm:mb-10">
+                        Handcrafted modern Habesha tops, dresses, kamis, and everyday essentials made from 100% pure cotton. Fast delivery service in Addis Ababa.
                     </p>
 
                     <!-- Core CTAs -->
-                    <div class="flex flex-wrap gap-4">
-                        <button onclick="navigateTo('catalog')" class="px-8 py-4 bg-pearl text-charcoal text-xs tracking-widest uppercase font-bold rounded-none hover:bg-brandYellow hover:text-charcoal transition-all duration-300 shadow-md">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="navigateTo('catalog')" class="w-full sm:w-auto px-8 py-4 bg-pearl text-charcoal text-xs tracking-widest uppercase font-bold rounded-none hover:bg-brandYellow hover:text-charcoal transition-all duration-300 shadow-md">
                             Browse the Collection
                         </button>
-                        <button onclick="navigateTo('locations')" class="px-8 py-4 border border-pearl/30 text-pearl text-xs tracking-widest uppercase font-bold rounded-none hover:bg-pearl hover:text-charcoal hover:border-pearl transition-all duration-300">
+                        <button onclick="navigateTo('locations')" class="w-full sm:w-auto px-8 py-4 border border-pearl/30 text-pearl text-xs tracking-widest uppercase font-bold rounded-none hover:bg-pearl hover:text-charcoal hover:border-pearl transition-all duration-300">
                             Visit Our Stores
                         </button>
                     </div>
                 </div>
 
                 <!-- Right Editorial Image Area -->
-                <div class="w-full lg:w-1/2 h-[450px] lg:h-[calc(100vh-96px)] relative bg-[#1c1815] overflow-hidden flex items-center justify-center">
+                <div class="w-full lg:w-1/2 h-[400px] sm:h-[450px] lg:h-[calc(100vh-96px)] relative bg-[#1c1815] overflow-hidden flex items-center justify-center">
                     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#faf9f5_1px,transparent_1px)] [background-size:24px_24px]"></div>
                     
                     <div class="absolute inset-4 sm:inset-10 overflow-hidden border border-pearl/10 flex items-center justify-center">
-                        <img src="Gemini_Generated_Image_bk440ibk440ibk44.png" 
-                             alt="Luxury Habesha Lookbook Silhouette" 
-                             class="w-full h-full object-cover object-[center_18%] hover:scale-105 transition-transform duration-[2s] ease-out"
+                        <img src="https://lh3.googleusercontent.com/d/1dUn14Kvq2TCliS9nPfONs2iy6o0rSJ8T" 
+                             alt="Jerry Design Featured Hero Look" 
+                             class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-[2s] ease-out"
                              onerror="this.src='https://placehold.co/800x1000/1e1a17/faf9f5?text=Jerry+Design+Lookbook'">
                         
                         <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent"></div>
                     </div>
 
-                    <!-- Luxury Floating Brand Logo Stamp -->
-                    <div class="absolute bottom-10 right-10 sm:right-16 bg-charcoal/90 backdrop-blur-md border border-brandYellow/40 p-5 flex items-center gap-4 shadow-2xl max-w-sm">
-                        <div class="w-16 h-16 rounded-full overflow-hidden shrink-0 border border-brandYellow p-0.5">
-                            <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="Jerry Design Logo Emblem" class="w-full h-full object-cover object-center scale-110 rounded-full" onerror="this.src='https://placehold.co/100x100/1e1a17/f2a900?text=JD'">
+                    <!-- Luxury Floating Brand Logo Stamp (Zoomed logo) -->
+                    <div class="absolute bottom-6 right-6 sm:bottom-10 sm:right-16 bg-charcoal/90 backdrop-blur-md border border-brandYellow/40 p-4 sm:p-5 flex items-center gap-3 sm:gap-4 shadow-2xl max-w-sm">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden shrink-0 border border-brandYellow p-0.5">
+                            <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="Jerry Design Logo Emblem" class="w-full h-full object-cover object-center scale-150 rounded-full" onerror="this.src='https://placehold.co/100x100/1e1a17/f2a900?text=JD'">
                         </div>
                         <div class="flex flex-col text-pearl">
                             <h4 class="text-xs font-bold tracking-[0.2em] uppercase text-brandYellow">JD Signature Stamp</h4>
@@ -189,11 +196,12 @@
                 </div>
             </section>
 
-            <section class="py-20 md:py-32 px-6 max-w-7xl mx-auto">
+            <section class="py-16 sm:py-24 md:py-32 px-4 sm:px-6 max-w-7xl mx-auto">
                 <div class="text-center max-w-2xl mx-auto mb-16">
                     <span class="text-brandRed text-xs font-semibold tracking-[0.3em] uppercase mb-3 block">100% PURE COTTON PIECES</span>
                     <h2 class="font-serif text-3xl sm:text-4xl italic text-charcoal">Handwoven Masterpieces</h2>
                     <div class="w-16 h-[2px] bg-brandYellow mx-auto mt-4"></div>
+                    <p class="text-xs text-charcoal/60 uppercase tracking-widest mt-3">All items include delivery service in Addis Ababa</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -205,7 +213,7 @@
                                 <span class="text-[10px] tracking-[0.2em] text-brandYellow uppercase font-semibold">100% Fine Organic Cotton</span>
                             </div>
                         </div>
-                        <h3 class="font-serif text-2xl italic text-charcoal mb-2">Modern Habesha Dresses</h3>
+                        <h3 class="font-serif text-2xl italic text-charcoal mb-2">Modern Habesha Dresses & Kamis</h3>
                         <p class="text-charcoal/60 text-xs tracking-wider uppercase mb-3">Custom order & Ready-to-wear Gowns</p>
                         <span class="text-xs tracking-widest font-bold uppercase text-brandRed group-hover:translate-x-2 transition-transform duration-300 inline-block">Explore dresses <i class="fa-solid fa-arrow-right ml-1"></i></span>
                     </div>
@@ -218,12 +226,12 @@
                                 <span class="text-[10px] tracking-[0.2em] text-brandYellow uppercase font-semibold">100% Cotton Comfort</span>
                             </div>
                         </div>
-                        <h3 class="font-serif text-2xl italic text-charcoal mb-2">Contemporary Tops</h3>
+                        <h3 class="font-serif text-2xl italic text-charcoal mb-2">Contemporary Tops & Habesha Libs</h3>
                         <p class="text-charcoal/60 text-xs tracking-wider uppercase mb-3">Perfectly draped hand-loomed tunics</p>
                         <span class="text-xs tracking-widest font-bold uppercase text-brandRed group-hover:translate-x-2 transition-transform duration-300 inline-block">Explore Tops <i class="fa-solid fa-arrow-right ml-1"></i></span>
                     </div>
 
-                    <!-- Column 3: Kids Dress Collection (Weldeyes Kids Dress Featured) -->
+                    <!-- Column 3: Kids Dress Collection -->
                     <div class="group cursor-pointer flex flex-col" onclick="filterCatalog('kids'); navigateTo('catalog')">
                         <div class="editorial-img-container aspect-[3/4] bg-charcoal overflow-hidden mb-6 relative">
                             <img src="https://lh3.googleusercontent.com/d/1u2ldAqKl_JAjUjvLX-15OI0yGpWCqwTr" alt="Weldeyes Kids Dress" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://placehold.co/600x800/1e1a17/faf9f5?text=Weldeyes+Kids+Dress'">
@@ -238,14 +246,14 @@
                 </div>
             </section>
 
-            <section class="bg-charcoal text-pearl py-20 md:py-32 relative overflow-hidden">
-                <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <section class="bg-charcoal text-pearl py-16 sm:py-24 md:py-32 relative overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <!-- Left Image Stack -->
                     <div class="relative order-2 lg:order-1">
                         <div class="editorial-img-container max-w-md aspect-[3/4] bg-pearl/10 border border-pearl/15 z-10 relative">
                             <img src="https://lh3.googleusercontent.com/d/1hYGGTZU6pi_giJ1p10z67bIXRuFFYCfF" alt="Eyerus (Jerry) Designer" class="w-full h-full object-cover filter brightness-90 grayscale" onerror="this.src='https://placehold.co/600x800/1e1a17/faf9f5?text=Designer+Eyerus'">
                         </div>
-                        <div class="absolute -bottom-8 -right-4 md:right-12 bg-brandYellow text-charcoal p-8 max-w-[280px] z-20 shadow-2xl">
+                        <div class="absolute -bottom-6 sm:-bottom-8 -right-2 sm:-right-4 md:right-12 bg-brandYellow text-charcoal p-6 sm:p-8 max-w-[280px] z-20 shadow-2xl">
                             <h4 class="font-serif italic text-2xl mb-1">20 Years</h4>
                             <p class="text-xs font-semibold uppercase tracking-wider">Dedicated to authentic Ethiopian cotton weaving.</p>
                         </div>
@@ -261,11 +269,11 @@
                             Our founder, Eyerus (affectionately known as Jerry), started her journey in her early twenties. Captivated by the elegant rhythms of weaving on physical hand-looms, she recognized that traditional garments deserved to be enjoyed in daily life.
                         </p>
                         <p class="text-pearl/60 text-xs sm:text-sm leading-relaxed">
-                            For twenty years, Jerry Design has used 100% pure organic cotton to bridge beautiful cultural expressions with active modern lives, transforming high-contrast textures into comfortable everyday fits.
+                            For twenty years, Jerry Design has used 100% pure organic cotton to bridge beautiful cultural expressions with active modern lives, transforming high-contrast textures into comfortable everyday fits with convenient Addis Ababa delivery.
                         </p>
 
                         <div class="pt-4">
-                            <button onclick="navigateTo('story')" class="px-8 py-4 bg-brandRed text-pearl text-xs tracking-widest uppercase font-bold rounded-none hover:bg-brandYellow hover:text-charcoal transition-all duration-300">
+                            <button onclick="navigateTo('story')" class="w-full sm:w-auto px-8 py-4 bg-brandRed text-pearl text-xs tracking-widest uppercase font-bold rounded-none hover:bg-brandYellow hover:text-charcoal transition-all duration-300">
                                 Read the Full Journey
                             </button>
                         </div>
@@ -273,7 +281,7 @@
                 </div>
             </section>
 
-            <section class="py-20 md:py-32 px-6 max-w-7xl mx-auto">
+            <section class="py-16 sm:py-24 md:py-32 px-4 sm:px-6 max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <!-- Map / Location Showcase Left Column -->
                     <div class="lg:col-span-5 space-y-8">
@@ -283,43 +291,43 @@
                             <p class="text-charcoal/60 text-xs uppercase tracking-wider mt-2">Touch our soft, 100% handwoven threads in person</p>
                         </div>
 
-                        <!-- Store Card 1 (Jerry Design 1 now swapped to Balderas location) -->
+                        <!-- Store Card 1 -->
                         <div class="border-l-4 border-brandRed bg-charcoal p-6 text-pearl relative overflow-hidden group">
-                            <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="" class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full opacity-10 object-cover object-center scale-110 group-hover:scale-125 transition-transform duration-500">
+                            <img src="https://lh3.googleusercontent.com/d/1dUn14Kvq2TCliS9nPfONs2iy6o0rSJ8T" alt="" class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full opacity-10 object-cover object-center scale-150 group-hover:scale-125 transition-transform duration-500">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="font-bold text-sm tracking-widest uppercase relative z-10">Jerry Design 1</h3>
                                 <span class="px-2.5 py-0.5 bg-brandYellow text-charcoal text-[9px] font-bold tracking-widest uppercase rounded-full relative z-10">ACTIVE STORE</span>
                             </div>
                             <p class="text-pearl/70 text-xs font-serif italic mb-4 relative z-10">Balderas, near Wogagen Bank</p>
-                            <div class="flex items-center gap-4 relative z-10">
+                            <div class="flex flex-wrap items-center gap-4 relative z-10">
                                 <a href="https://maps.app.goo.gl/5wxK3We7uBar35UT8" target="_blank" class="text-xs font-bold text-brandYellow hover:underline uppercase tracking-widest flex items-center gap-1">
                                     <i class="fa-solid fa-location-dot"></i> Get Directions
                                 </a>
-                                <span class="text-pearl/30 text-xs">|</span>
+                                <span class="text-pearl/30 text-xs hidden sm:inline">|</span>
                                 <span class="text-xs text-pearl/70 uppercase tracking-wider">9:00 AM - 7:00 PM (Mon-Sat)</span>
                             </div>
                         </div>
 
-                        <!-- Store Card 2 (Jerry Design 2 now swapped to Belhair location) -->
+                        <!-- Store Card 2 (Updated to 1st floor) -->
                         <div class="border-l-4 border-brandYellow bg-charcoal/5 p-6 border-y border-r border-charcoal/10 relative overflow-hidden group">
-                            <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="" class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full opacity-5 object-cover object-center scale-110 group-hover:scale-125 transition-transform duration-500">
+                            <img src="https://lh3.googleusercontent.com/d/1dUn14Kvq2TCliS9nPfONs2iy6o0rSJ8T" alt="" class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full opacity-5 object-cover object-center scale-150 group-hover:scale-125 transition-transform duration-500">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="font-bold text-sm tracking-widest uppercase relative z-10 text-charcoal">Jerry Design 2</h3>
                                 <span class="px-2.5 py-0.5 border border-charcoal/20 text-charcoal text-[9px] font-bold tracking-widest uppercase rounded-full relative z-10">VISIT IN STORE</span>
                             </div>
-                            <p class="text-charcoal/70 text-xs font-serif italic mb-4 relative z-10">Belhair, 2nd floor of the building near Ebenezer Hotel</p>
-                            <div class="flex items-center gap-4 relative z-10">
+                            <p class="text-charcoal/70 text-xs font-serif italic mb-4 relative z-10">Belhair, 1st floor of the building near Ebenezer Hotel</p>
+                            <div class="flex flex-wrap items-center gap-4 relative z-10">
                                 <a href="https://maps.app.goo.gl/AgWN3bf3RuvMtJXa6" target="_blank" class="text-xs font-bold text-brandRed hover:underline uppercase tracking-widest flex items-center gap-1">
                                     <i class="fa-solid fa-location-dot"></i> Get Directions
                                 </a>
-                                <span class="text-charcoal/30 text-xs">|</span>
+                                <span class="text-charcoal/30 text-xs hidden sm:inline">|</span>
                                 <span class="text-xs text-charcoal/70 uppercase tracking-wider">9:00 AM - 7:00 PM (Mon-Sat)</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Maps Showcase Right Column -->
-                    <div class="lg:col-span-7 bg-charcoal min-h-[350px] relative overflow-hidden flex flex-col justify-between p-8 text-pearl shadow-2xl border border-charcoal/10">
+                    <div class="lg:col-span-7 bg-charcoal min-h-[350px] relative overflow-hidden flex flex-col justify-between p-6 sm:p-8 text-pearl shadow-2xl border border-charcoal/10">
                         <div class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#faf9f5_1px,transparent_1px)] [background-size:16px_16px]"></div>
                         
                         <!-- Header and active stats -->
@@ -329,11 +337,11 @@
                                 <p class="font-serif italic text-sm text-pearl/70">Connect with us directly or visit our locations</p>
                             </div>
                             <div class="flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/30 text-green-400 rounded-full text-[10px] font-bold tracking-widest uppercase">
-                                <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> Open Mon - Sat, 9:00 AM - 7:00 PM
+                                <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> Delivery in Addis Available
                             </div>
                         </div>
 
-                        <!-- Contact Grid (Updated Eyerus phone number) -->
+                        <!-- Contact Grid -->
                         <div class="z-10 my-8 py-6 grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
                                 <span class="text-[10px] tracking-widest text-brandRed font-bold uppercase">STORE ONE CONTACT</span>
@@ -353,7 +361,7 @@
                             </div>
                         </div>
 
-                        <!-- CTA Bottom actions (Updated map links to match swapped store locations) -->
+                        <!-- CTA Bottom actions -->
                         <div class="z-10 flex flex-wrap gap-4 pt-6 border-t border-pearl/10">
                             <a href="https://maps.app.goo.gl/5wxK3We7uBar35UT8" target="_blank" class="px-5 py-3 bg-brandRed text-pearl font-bold text-[11px] tracking-widest uppercase hover:bg-brandYellow hover:text-charcoal transition-all flex items-center gap-2">
                                 <i class="fa-solid fa-map-location-dot"></i> Open GPS Map (JD 1 - Balderas)
@@ -371,28 +379,28 @@
         <!-- PAGE 2: CATALOG / SHOP PAGE -->
         <div id="view-catalog" class="page-view">
             <section class="py-16 bg-charcoal text-pearl border-b border-pearl/10">
-                <div class="max-w-7xl mx-auto px-6 text-center">
-                    <span class="text-brandYellow text-xs font-semibold tracking-[0.3em] uppercase block mb-3">100% PURE COTTON LOOKBOOK</span>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+                    <span class="text-brandYellow text-xs font-semibold tracking-[0.3em] uppercase block mb-3">100% PURE COTTON LOOKBOOK • ADDIS ABABA DELIVERY</span>
                     <h1 class="font-serif text-4xl sm:text-5xl italic">Jerry Design Catalog</h1>
                     <div class="w-16 h-[2px] bg-brandRed mx-auto mt-4 mb-6"></div>
                     <p class="max-w-xl mx-auto text-pearl/70 text-xs sm:text-sm leading-relaxed">
-                        We focus on premium, handcrafted fits and 100% pure cotton textiles. All items are ready-to-wear. Inquire directly via WhatsApp or Telegram to purchase or confirm large quantity orders.
+                        We focus on premium, handcrafted fits, kamis, and 100% pure cotton textiles with delivery service available in Addis Ababa. Inquire via WhatsApp or Telegram to confirm orders.
                     </p>
                 </div>
             </section>
 
             <!-- Dynamic Product Grid Section with Filters -->
-            <section class="py-20 px-6 max-w-7xl mx-auto">
+            <section class="py-16 sm:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
                 <!-- Filter Tabs -->
-                <div class="flex flex-wrap justify-center gap-4 mb-16 text-xs font-bold tracking-widest uppercase">
-                    <button onclick="filterCatalog('all')" id="filter-all" class="px-6 py-2 border-b-2 border-brandRed text-charcoal filter-btn">All Pieces</button>
-                    <button onclick="filterCatalog('dress')" id="filter-dress" class="px-6 py-2 border-b-2 border-transparent text-charcoal/50 hover:text-charcoal filter-btn">Dresses</button>
-                    <button onclick="filterCatalog('top')" id="filter-top" class="px-6 py-2 border-b-2 border-transparent text-charcoal/50 hover:text-charcoal filter-btn">Tops & Tunics</button>
-                    <button onclick="filterCatalog('kids')" id="filter-kids" class="px-6 py-2 border-b-2 border-transparent text-charcoal/50 hover:text-charcoal filter-btn">Kids Dress</button>
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-16 text-xs font-bold tracking-widest uppercase">
+                    <button onclick="filterCatalog('all')" id="filter-all" class="px-5 py-2.5 border-b-2 border-brandRed text-charcoal filter-btn">All Pieces</button>
+                    <button onclick="filterCatalog('dress')" id="filter-dress" class="px-5 py-2.5 border-b-2 border-transparent text-charcoal/50 hover:text-charcoal filter-btn">Dresses & Kamis</button>
+                    <button onclick="filterCatalog('top')" id="filter-top" class="px-5 py-2.5 border-b-2 border-transparent text-charcoal/50 hover:text-charcoal filter-btn">Tops & Libs</button>
+                    <button onclick="filterCatalog('kids')" id="filter-kids" class="px-5 py-2.5 border-b-2 border-transparent text-charcoal/50 hover:text-charcoal filter-btn">Kids Dress</button>
                 </div>
 
                 <!-- Product Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" id="product-grid-container">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10" id="product-grid-container">
                     <!-- Products populated dynamically -->
                 </div>
             </section>
@@ -401,7 +409,7 @@
 
         <!-- PAGE 3: PRODUCT DETAIL PAGE -->
         <div id="view-detail" class="page-view">
-            <section class="py-12 md:py-20 px-6 max-w-7xl mx-auto">
+            <section class="py-12 md:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
                 <!-- Back Link -->
                 <button onclick="navigateTo('catalog')" class="mb-10 text-xs font-bold tracking-widest uppercase text-brandRed hover:text-charcoal transition-colors flex items-center gap-2">
                     <i class="fa-solid fa-arrow-left"></i> Back to Catalog
@@ -426,8 +434,13 @@
                             <span class="text-brandRed text-xs font-semibold tracking-[0.25em] uppercase block mb-2 font-sans" id="detail-category-label">Jerry Design Showcase</span>
                             <h1 class="font-serif text-3xl sm:text-4xl italic text-charcoal mb-4" id="detail-title">Saba Gown</h1>
                             
-                            <div class="mb-6">
+                            <div class="mb-4 flex flex-wrap gap-2">
                                 <span class="text-xs uppercase text-brandRed font-bold tracking-widest">100% Pure Cotton • Ready-to-Wear</span>
+                            </div>
+
+                            <!-- Delivery service badge on every item -->
+                            <div class="mb-6 inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 text-xs font-bold tracking-wider uppercase rounded">
+                                <i class="fa-solid fa-truck-fast"></i> Delivery service available in Addis Ababa
                             </div>
 
                             <p class="text-charcoal/80 text-sm leading-relaxed mb-6 font-serif italic" id="detail-desc">
@@ -438,27 +451,23 @@
                             <div class="bg-brandYellow/10 border-l-2 border-brandYellow p-4 mb-8">
                                 <p class="text-xs text-charcoal font-medium leading-relaxed">
                                     <i class="fa-solid fa-circle-info text-brandRed mr-1"></i>
-                                    All our items are ready-to-wear for immediate delivery or store pickup. If you need a large quantity of the same item, please contact us directly to confirm stock or place an order.
+                                    All items are ready-to-wear with convenient Addis Ababa delivery service. For bulk orders or specific custom sizing, reach out directly through our order channels.
                                 </p>
                             </div>
 
-                            <!-- Direct High-Conversion Interactive Stack (Updated Telegram options & WhatsApp) -->
+                            <!-- Direct High-Conversion Interactive Stack (1 WhatsApp, 1 Telegram, 1 Phone) -->
                             <div class="space-y-4">
                                 <h4 class="text-[10px] font-bold tracking-[0.2em] text-charcoal uppercase">Order or Inquire Instantly</h4>
                                 
-                                <a id="detail-whatsapp-btn" href="https://wa.me/251911698369" target="_blank" class="w-full py-4 bg-[#25D366] text-white hover:bg-emerald-600 transition-all font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2">
+                                <a id="detail-whatsapp-btn" href="https://wa.me/251911698369" target="_blank" class="w-full py-4 bg-[#25D366] text-white hover:bg-emerald-600 transition-all font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2 rounded shadow">
                                     <i class="fa-brands fa-whatsapp text-lg"></i> Purchase via WhatsApp (Eyerus Taye)
                                 </a>
 
-                                <a id="detail-telegram-btn-1" href="https://t.me/Jerryeyerus23" target="_blank" class="w-full py-4 bg-[#229ED9] text-white hover:bg-[#1e88be] transition-all font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2">
+                                <a id="detail-telegram-btn-1" href="https://t.me/Jerryeyerus23" target="_blank" class="w-full py-4 bg-[#229ED9] text-white hover:bg-[#1e88be] transition-all font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2 rounded shadow">
                                     <i class="fa-brands fa-telegram text-lg"></i> Order via Telegram (@Jerryeyerus23)
                                 </a>
 
-                                <a id="detail-telegram-btn-2" href="https://t.me/Naomiomery" target="_blank" class="w-full py-4 bg-[#229ED9]/80 text-white hover:bg-[#1e88be] transition-all font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2">
-                                    <i class="fa-brands fa-telegram text-lg"></i> Order via Telegram (@Naomiomery)
-                                </a>
-
-                                <a id="detail-phone-btn" href="tel:+251911698369" class="w-full py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-pearl transition-all font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2">
+                                <a id="detail-phone-btn" href="tel:+251911698369" class="w-full py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-pearl transition-all font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2 rounded shadow">
                                     <i class="fa-solid fa-phone"></i> Call Eyerus Taye: +251 911 698 369
                                 </a>
                             </div>
@@ -467,7 +476,7 @@
                         <!-- Craftsmanship Specs Accordion Dropdown -->
                         <div class="border-t border-charcoal/15 pt-6 space-y-4">
                             <div class="border border-charcoal/10 bg-charcoal/[0.02]">
-                                <button onclick="toggleAccordion('tab-heritage')" class="w-full px-4 py-3 flex justify-between items-center text-xs tracking-widest font-bold uppercase text-charcoal">
+                                <button onclick="toggleAccordion('tab-heritage')" class="w-full px-4 py-3.5 flex justify-between items-center text-xs tracking-widest font-bold uppercase text-charcoal">
                                     <span>The 100% Cotton Weave</span>
                                     <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300" id="icon-heritage"></i>
                                 </button>
@@ -477,7 +486,7 @@
                             </div>
 
                             <div class="border border-charcoal/10 bg-charcoal/[0.02]">
-                                <button onclick="toggleAccordion('tab-care')" class="w-full px-4 py-3 flex justify-between items-center text-xs tracking-widest font-bold uppercase text-charcoal">
+                                <button onclick="toggleAccordion('tab-care')" class="w-full px-4 py-3.5 flex justify-between items-center text-xs tracking-widest font-bold uppercase text-charcoal">
                                     <span>Cotton Care & First-Time Wash Guide</span>
                                     <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300" id="icon-care"></i>
                                 </button>
@@ -485,7 +494,8 @@
                                     <p>For our 100% cotton garments containing heavy handwoven golden stitching (Tilet), we suggest dry cleaning or gentle hand washing in cool water. Always line-dry out of direct intense midday sun to maintain rich colors.</p>
                                     <div class="p-3 bg-brandRed/10 border-l-2 border-brandRed text-charcoal">
                                         <strong class="text-brandRed uppercase tracking-wider block mb-1">Important First-Time Wash Instruction:</strong>
-                                        For the first time washing, if the clothing is colored, it <strong>must be washed completely alone</strong> to prevent color transfer. Please avoid using powerful washing chemicals, bleach, or harsh synthetic detergents, as strong chemical agents might permanently damage or strip the natural vibrant colors of your handwoven fabric. Always use mild soap in cold or lukewarm water.
+                                        <p class="mb-2">For the first time washing, if the clothing is colored, it <strong>must be washed completely alone</strong> to prevent any color transfer.</p>
+                                        <p>Please avoid using powerful washing chemicals, bleach, or harsh synthetic detergents. Strong chemical agents can permanently destroy or strip the natural vibrant colors of your handwoven fabric. Always use a mild soap in cold or lukewarm water.</p>
                                     </div>
                                 </div>
                             </div>
@@ -500,9 +510,9 @@
         <div id="view-story" class="page-view">
             <section class="py-24 bg-charcoal text-pearl text-center border-b border-pearl/10 relative overflow-hidden">
                 <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#f2a900_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
-                <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center">
-                    <div class="w-20 h-20 rounded-full overflow-hidden border border-brandYellow/40 p-1 bg-charcoal mb-6 shadow-xl">
-                        <img src="photo_2026-07-14_16-15-00.jpg" alt="JD" class="w-full h-full object-cover rounded-full" onerror="this.src='https://placehold.co/100x100/1e1a17/f2a900?text=JD'">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center">
+                    <div class="w-20 h-20 rounded-full overflow-hidden border border-brandYellow/40 p-1 bg-charcoal mb-6 shadow-xl flex items-center justify-center">
+                        <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="JD Logo" class="w-full h-full object-cover object-center scale-150 rounded-full" onerror="this.src='https://placehold.co/100x100/1e1a17/f2a900?text=JD'">
                     </div>
                     <span class="text-brandYellow text-xs font-semibold tracking-[0.3em] uppercase block mb-3">OUR FOUNDATION</span>
                     <h1 class="font-serif text-4xl sm:text-6xl italic leading-tight">Two Decades of Craft: <br>The Eyerus Story</h1>
@@ -510,7 +520,7 @@
                 </div>
             </section>
 
-            <section class="py-20 md:py-32 px-6 max-w-4xl mx-auto space-y-16">
+            <section class="py-16 sm:py-24 md:py-32 px-4 sm:px-6 max-w-4xl mx-auto space-y-16">
                 <div class="space-y-6">
                     <h2 class="font-serif text-3xl italic text-charcoal text-center">"Every loom captures a distinct signature of cultural liberation."</h2>
                     <p class="text-charcoal/80 text-sm sm:text-base leading-relaxed text-center font-serif">
@@ -523,7 +533,7 @@
                         <span class="absolute -left-[31px] md:-left-[47px] top-0.5 w-4 h-4 rounded-full bg-brandRed border-4 border-pearl"></span>
                         <h3 class="text-xl font-bold tracking-widest uppercase mb-2">The Early Twenties Genesis</h3>
                         <p class="text-charcoal/70 text-xs sm:text-sm leading-relaxed max-w-2xl">
-                            Armed with raw passion and traditional weaving lessons from rural masters, Eyerus began her experiments. She adapted the rigid structure of historic textiles to produce softer, lightweight everyday tunics made of 100% cotton for friends and colleagues, setting the core philosophy of Jerry Design.
+                            Armed with raw passion and traditional weaving lessons from rural masters, Eyerus began her experiments. She adapted the rigid structure of historic textiles to produce softer, lightweight everyday tunics and kamis made of 100% cotton for friends and colleagues, setting the core philosophy of Jerry Design.
                         </p>
                     </div>
 
@@ -531,7 +541,7 @@
                         <span class="absolute -left-[31px] md:-left-[47px] top-0.5 w-4 h-4 rounded-full bg-brandYellow border-4 border-pearl"></span>
                         <h3 class="text-xl font-bold tracking-widest uppercase mb-2">A Brand Redefined</h3>
                         <p class="text-charcoal/70 text-xs sm:text-sm leading-relaxed max-w-2xl">
-                            Establishing her first physical store, Jerry Design gained momentum for championing 100% traditional cotton materials styled with a contemporary Western fit. It was no longer clothing for special holidays only; it became clothing that defined everyday pride and comfort.
+                            Establishing physical stores in Addis Ababa, Jerry Design gained momentum for championing 100% traditional cotton materials styled with a contemporary Western fit and speedy delivery service.
                         </p>
                     </div>
 
@@ -545,7 +555,7 @@
                 </div>
 
                 <div class="pt-8 text-center">
-                    <button onclick="navigateTo('catalog')" class="px-8 py-4 bg-charcoal text-pearl text-xs tracking-widest uppercase font-bold rounded-none hover:bg-brandRed hover:text-pearl transition-all duration-300">
+                    <button onclick="navigateTo('catalog')" class="w-full sm:w-auto px-8 py-4 bg-charcoal text-pearl text-xs tracking-widest uppercase font-bold rounded-none hover:bg-brandRed hover:text-pearl transition-all duration-300">
                         View Heritage Catalog
                     </button>
                 </div>
@@ -556,23 +566,23 @@
         <!-- PAGE 5: BOUTIQUE LOCATIONS & CONTACTS -->
         <div id="view-locations" class="page-view">
             <section class="py-16 bg-charcoal text-pearl border-b border-pearl/10 text-center">
-                <div class="max-w-7xl mx-auto px-6">
-                    <span class="text-brandYellow text-xs font-semibold tracking-[0.3em] uppercase block mb-3">VISIT OR CONTACT US</span>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                    <span class="text-brandYellow text-xs font-semibold tracking-[0.3em] uppercase block mb-3">VISIT OR CONTACT US • ADDIS ABABA DELIVERY</span>
                     <h1 class="font-serif text-4xl sm:text-5xl italic">Find us</h1>
                     <div class="w-16 h-[2px] bg-brandRed mx-auto mt-4 mb-6"></div>
                     <p class="max-w-xl mx-auto text-pearl/70 text-xs sm:text-sm leading-relaxed">
-                        We welcome walk-in visitors at both stores from Monday to Saturday. Call us directly or message our active team members online for orders, shipping rates, or sizing consulting.
+                        We welcome walk-in visitors at both stores from Monday to Saturday. Call us directly or message our active team members online for orders, sizing consulting, or prompt Addis Ababa delivery.
                     </p>
                 </div>
             </section>
 
-            <!-- Location Columns & Contacts Grid (Locations & descriptions swapped between JD 1 and JD 2) -->
-            <section class="py-20 px-6 max-w-7xl mx-auto space-y-16">
+            <!-- Location Columns & Contacts Grid -->
+            <section class="py-16 sm:py-20 px-4 sm:px-6 max-w-7xl mx-auto space-y-16">
                 <!-- Section 1: Showroom Registry -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <!-- Branch 1 (Jerry Design 1 now Balderas location & couture/evening description) -->
+                    <!-- Branch 1 -->
                     <div class="bg-charcoal text-pearl p-8 border border-pearl/10 flex flex-col justify-between space-y-6 relative overflow-hidden group">
-                        <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="" class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full opacity-10 object-cover object-center scale-110 group-hover:scale-125 transition-transform duration-500">
+                        <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="" class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full opacity-10 object-cover object-center scale-150 group-hover:scale-125 transition-transform duration-500">
                         <div class="relative z-10">
                             <span class="px-3 py-1 bg-brandRed text-pearl font-bold text-[9px] tracking-widest uppercase rounded-full">SPECIALIZED EVENING & COUTURE</span>
                             <h2 class="font-serif text-3xl italic mt-4 mb-2">Jerry Design 1</h2>
@@ -580,41 +590,41 @@
                             <div class="w-12 h-[2px] bg-brandYellow mb-6"></div>
                             
                             <p class="text-sm text-pearl/80 leading-relaxed font-serif">
-                                Houses high-contrast premium handloomed wedding designs, exclusive custom gowns, and tailored evening garments.
+                                Houses high-contrast premium handloomed wedding designs, exclusive custom gowns, and tailored evening garments. Addis Ababa delivery available.
                             </p>
                         </div>
-                        <div class="pt-6 border-t border-pearl/10 flex items-center justify-between relative z-10">
+                        <div class="pt-6 border-t border-pearl/10 flex flex-wrap items-center justify-between gap-4 relative z-10">
                             <span class="text-xs tracking-widest uppercase font-bold text-brandYellow">Mon - Sat: 9:00 AM - 7:00 PM</span>
-                            <a href="https://maps.app.goo.gl/5wxK3We7uBar35UT8" target="_blank" class="px-4 py-2 bg-pearl text-charcoal font-bold text-[10px] tracking-widest uppercase hover:bg-brandYellow transition-colors flex items-center gap-1">
+                            <a href="https://maps.app.goo.gl/5wxK3We7uBar35UT8" target="_blank" class="px-4 py-2.5 bg-pearl text-charcoal font-bold text-[10px] tracking-widest uppercase hover:bg-brandYellow transition-colors flex items-center gap-1 rounded">
                                 <i class="fa-solid fa-map-location-dot"></i> Google Maps
                             </a>
                         </div>
                     </div>
 
-                    <!-- Branch 2 (Jerry Design 2 now Belhair location & everyday ready-to-wear description) -->
+                    <!-- Branch 2 (Belhair 1st floor) -->
                     <div class="bg-charcoal text-pearl p-8 border border-pearl/10 flex flex-col justify-between space-y-6 relative overflow-hidden group">
-                        <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="" class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full opacity-10 object-cover object-center scale-110 group-hover:scale-125 transition-transform duration-500">
+                        <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="" class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full opacity-10 object-cover object-center scale-150 group-hover:scale-125 transition-transform duration-500">
                         <div class="relative z-10">
                             <span class="px-3 py-1 bg-brandYellow text-charcoal font-bold text-[9px] tracking-widest uppercase rounded-full">MAIN STORE FLAGSHIP</span>
                             <h2 class="font-serif text-3xl italic mt-4 mb-2">Jerry Design 2</h2>
-                            <p class="text-xs text-brandYellow font-serif font-semibold mb-4">Belhair, 2nd floor of the building near Ebenezer Hotel</p>
+                            <p class="text-xs text-brandYellow font-serif font-semibold mb-4">Belhair, 1st floor of the building near Ebenezer Hotel</p>
                             <div class="w-12 h-[2px] bg-brandRed mb-6"></div>
                             
                             <p class="text-sm text-pearl/80 leading-relaxed font-serif">
-                                Houses our ready-to-wear everyday garments, curated minimalist cotton menswear collections, and newly crafted linen dresses. Walk-ins are always welcome.
+                                Houses our ready-to-wear everyday garments, kamis, habesha libs, and newly crafted linen dresses on the 1st floor. Walk-ins are always welcome.
                             </p>
                         </div>
-                        <div class="pt-6 border-t border-pearl/10 flex items-center justify-between relative z-10">
+                        <div class="pt-6 border-t border-pearl/10 flex flex-wrap items-center justify-between gap-4 relative z-10">
                             <span class="text-xs tracking-widest uppercase font-bold text-brandYellow">Mon - Sat: 9:00 AM - 7:00 PM</span>
-                            <a href="https://maps.app.goo.gl/AgWN3bf3RuvMtJXa6" target="_blank" class="px-4 py-2 bg-pearl text-charcoal font-bold text-[10px] tracking-widest uppercase hover:bg-brandYellow transition-colors flex items-center gap-1">
+                            <a href="https://maps.app.goo.gl/AgWN3bf3RuvMtJXa6" target="_blank" class="px-4 py-2.5 bg-pearl text-charcoal font-bold text-[10px] tracking-widest uppercase hover:bg-brandYellow transition-colors flex items-center gap-1 rounded">
                                 <i class="fa-solid fa-map-location-dot"></i> Google Maps
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Section 2: Hotlines Directory (Updated Eyerus phone number) -->
-                <div class="bg-charcoal/5 border border-charcoal/10 p-8 md:p-12">
+                <!-- Section 2: Hotlines Directory -->
+                <div class="bg-charcoal/5 border border-charcoal/10 p-6 sm:p-12">
                     <div class="text-center max-w-2xl mx-auto mb-12">
                         <span class="text-brandRed text-xs font-bold tracking-widest uppercase">HOTLINE DIRECTORY</span>
                         <h2 class="font-serif text-2xl sm:text-3xl italic text-charcoal mt-2">Speak Directly with Our Team</h2>
@@ -642,30 +652,30 @@
                 </div>
 
                 <!-- Section 3: WhatsApp Channels & Telegram -->
-                <div class="bg-charcoal text-pearl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="bg-charcoal text-pearl p-6 sm:p-12 flex flex-col md:flex-row justify-between items-center gap-8">
                     <div>
                         <h3 class="font-serif text-2xl sm:text-3xl italic text-brandYellow mb-2">Connect With Us Online & Social Media</h3>
                         <p class="text-xs text-pearl/70 max-w-xl leading-relaxed mb-4">
-                            Prefer texting or checking our social channels? Follow our official pages for new lookbooks, styling videos, and direct order inquiries.
+                            Prefer texting or checking our social channels? Follow our official pages for new lookbooks, styling videos, and direct order inquiries with delivery across Addis Ababa.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://www.instagram.com/jerrydrsign23" target="_blank" class="px-4 py-2 bg-gradient-to-r from-purple-600 via-pink-600 to-yellow-500 text-white font-bold text-[10px] tracking-widest uppercase flex items-center gap-1.5 hover:opacity-90 transition-opacity">
+                            <a href="https://www.instagram.com/jerrydrsign23" target="_blank" class="px-4 py-2.5 bg-gradient-to-r from-purple-600 via-pink-600 to-yellow-500 text-white font-bold text-[10px] tracking-widest uppercase flex items-center gap-1.5 hover:opacity-90 transition-opacity rounded">
                                 <i class="fa-brands fa-instagram text-sm"></i> Instagram (@jerrydrsign23)
                             </a>
-                            <a href="https://www.tiktok.com/@jerrydesign23" target="_blank" class="px-4 py-2 bg-black text-white font-bold text-[10px] tracking-widest uppercase flex items-center gap-1.5 hover:opacity-90 transition-opacity">
+                            <a href="https://www.tiktok.com/@jerrydesign23" target="_blank" class="px-4 py-2.5 bg-black text-white font-bold text-[10px] tracking-widest uppercase flex items-center gap-1.5 hover:opacity-90 transition-opacity rounded">
                                 <i class="fa-brands fa-tiktok text-sm"></i> TikTok (@jerrydesign23)
                             </a>
-                            <a href="https://www.facebook.com/share/1KHJpxtdQ5/" target="_blank" class="px-4 py-2 bg-[#1877F2] text-white font-bold text-[10px] tracking-widest uppercase flex items-center gap-1.5 hover:opacity-90 transition-opacity">
-                                <i class="fa-brands fa-facebook text-sm"></i> Facebook
+                            <a href="https://www.facebook.com/share/1KHJpxtdQ5/" target="_blank" class="px-4 py-2.5 bg-[#1877F2] text-white font-bold text-[10px] tracking-widest uppercase flex items-center gap-1.5 hover:opacity-90 transition-opacity rounded">
+                                <i class="fa-brands fa-facebook text-sm"></i> Facebook Page
                             </a>
                         </div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                        <a href="https://wa.me/251911698369" target="_blank" class="px-6 py-4 bg-emerald-600 text-white font-bold text-xs tracking-widest uppercase hover:bg-emerald-700 transition-colors text-center flex items-center justify-center gap-2">
+                        <a href="https://wa.me/251911698369" target="_blank" class="px-6 py-4 bg-emerald-600 text-white font-bold text-xs tracking-widest uppercase hover:bg-emerald-700 transition-colors text-center flex items-center justify-center gap-2 rounded shadow">
                             <i class="fa-brands fa-whatsapp text-lg"></i> Eyerus WhatsApp
                         </a>
-                        <a href="https://t.me/Jerryeyerus23" target="_blank" class="px-6 py-4 bg-[#229ED9] text-white font-bold text-xs tracking-widest uppercase hover:bg-[#1e88be] transition-colors text-center flex items-center justify-center gap-2">
+                        <a href="https://t.me/Jerryeyerus23" target="_blank" class="px-6 py-4 bg-[#229ED9] text-white font-bold text-xs tracking-widest uppercase hover:bg-[#1e88be] transition-colors text-center flex items-center justify-center gap-2 rounded shadow">
                             <i class="fa-brands fa-telegram text-lg"></i> @Jerryeyerus23
                         </a>
                     </div>
@@ -677,11 +687,11 @@
 
     <!-- FOOTER -->
     <footer class="bg-charcoal text-pearl border-t border-pearl/10 pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div class="space-y-6">
                 <a href="#" onclick="navigateTo('home')" class="flex items-center gap-2 tracking-widest text-left group">
                     <div class="w-10 h-10 rounded-full overflow-hidden border border-brandYellow/40 p-0.5 bg-charcoal">
-                        <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="Logo" class="w-full h-full object-cover object-center scale-110 rounded-full" onerror="this.src='https://placehold.co/100x100/1e1a17/f2a900?text=JD'">
+                        <img src="https://lh3.googleusercontent.com/d/1JqlIWGSPUCXE-lgOHSlb-83Q8vwy8FUU" alt="Logo" class="w-full h-full object-cover object-center scale-150 rounded-full" onerror="this.src='https://placehold.co/100x100/1e1a17/f2a900?text=JD'">
                     </div>
                     <div class="flex flex-col">
                         <span class="font-semibold text-base tracking-[0.15em] uppercase">
@@ -691,17 +701,17 @@
                     </div>
                 </a>
                 <p class="font-serif text-xs italic text-pearl/60 leading-relaxed">
-                    "Tradition Reimagined. Freedom Redefined." Twenty years of 100% cotton craft preserved in every thread. Modern Habesha dresses and minimal basics.
+                    "Tradition Reimagined. Freedom Redefined." Twenty years of 100% cotton craft preserved in every thread. Modern Habesha dresses, kamis, habesha libs, and minimal basics with Addis Ababa delivery service.
                 </p>
                 <!-- Social media links in footer -->
                 <div class="flex items-center gap-3 pt-2">
-                    <a href="https://www.instagram.com/jerrydrsign23" target="_blank" class="w-8 h-8 rounded-full bg-pearl/10 hover:bg-brandRed text-pearl flex items-center justify-center transition-colors" title="Instagram">
+                    <a href="https://www.instagram.com/jerrydrsign23" target="_blank" class="w-8 h-8 rounded-full bg-pearl/10 hover:bg-brandRed text-pearl flex items-center justify-center transition-colors" title="Instagram @jerrydrsign23">
                         <i class="fa-brands fa-instagram text-xs"></i>
                     </a>
-                    <a href="https://www.tiktok.com/@jerrydesign23" target="_blank" class="w-8 h-8 rounded-full bg-pearl/10 hover:bg-brandRed text-pearl flex items-center justify-center transition-colors" title="TikTok">
+                    <a href="https://www.tiktok.com/@jerrydesign23" target="_blank" class="w-8 h-8 rounded-full bg-pearl/10 hover:bg-brandRed text-pearl flex items-center justify-center transition-colors" title="TikTok @jerrydesign23">
                         <i class="fa-brands fa-tiktok text-xs"></i>
                     </a>
-                    <a href="https://www.facebook.com/share/1KHJpxtdQ5/" target="_blank" class="w-8 h-8 rounded-full bg-pearl/10 hover:bg-brandRed text-pearl flex items-center justify-center transition-colors" title="Facebook">
+                    <a href="https://www.facebook.com/share/1KHJpxtdQ5/" target="_blank" class="w-8 h-8 rounded-full bg-pearl/10 hover:bg-brandRed text-pearl flex items-center justify-center transition-colors" title="Facebook Page">
                         <i class="fa-brands fa-facebook-f text-xs"></i>
                     </a>
                 </div>
@@ -722,6 +732,7 @@
                 <ul class="space-y-2 text-xs text-pearl/70 font-semibold tracking-wider">
                     <li>Instagram: <a href="https://www.instagram.com/jerrydrsign23" target="_blank" class="text-brandRed hover:underline">@jerrydrsign23</a></li>
                     <li>TikTok: <a href="https://www.tiktok.com/@jerrydesign23" target="_blank" class="text-brandRed hover:underline">@jerrydesign23</a></li>
+                    <li>Facebook: <a href="https://www.facebook.com/share/1KHJpxtdQ5/" target="_blank" class="text-brandRed hover:underline">Official Page</a></li>
                     <li>WhatsApp: <a href="https://wa.me/251911698369" target="_blank" class="text-brandRed hover:underline">+251 911 698 369</a></li>
                 </ul>
             </div>
@@ -729,14 +740,29 @@
             <div class="space-y-4">
                 <h4 class="text-xs font-bold tracking-widest uppercase text-brandYellow">Our Stores</h4>
                 <p class="text-xs text-pearl/70 font-serif leading-relaxed">
-                    Jerry Design 1 & Jerry Design 2<br>
+                    Jerry Design 1 (Balderas) & Jerry Design 2 (Belhair 1st Floor)<br>
                     Addis Ababa, Ethiopia<br>
                     Mon - Sat: 9:00 AM - 7:00 PM
                 </p>
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-pearl/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] tracking-widest text-pearl/50 uppercase font-bold">
+        <!-- Google Ranking Hashtags Block -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-8 text-[11px] text-pearl/40 font-mono tracking-wider flex flex-wrap gap-2">
+            <span>#Jerry Design</span>
+            <span>#Jerry</span>
+            <span>#Design</span>
+            <span>#Habesha</span>
+            <span>#Ethiopia</span>
+            <span>#Kamis</span>
+            <span>#Habesha kemis</span>
+            <span>#Habesha libs</span>
+            <span>#Dress</span>
+            <span>#kids dress</span>
+            <span>#AddisAbabaDelivery</span>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 border-t border-pearl/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] tracking-widest text-pearl/50 uppercase font-bold">
             <p>&copy; 2026 Jerry Design. All rights reserved.</p>
             <p>Crafted for 100% cotton handwoven cultural preservation</p>
         </div>
@@ -1032,7 +1058,7 @@
 
             container.innerHTML = items.map(product => {
                 return `
-                    <div class="group flex flex-col bg-charcoal/[0.01] border border-charcoal/5 p-4 transition-all duration-300 hover:shadow-xl hover:border-charcoal/10" onclick="viewProductDetail('${product.id}')">
+                    <div class="group flex flex-col bg-charcoal/[0.01] border border-charcoal/5 p-4 transition-all duration-300 hover:shadow-xl hover:border-charcoal/10 rounded" onclick="viewProductDetail('${product.id}')">
                         <div class="editorial-img-container aspect-[3/4] bg-charcoal/5 overflow-hidden mb-6 relative cursor-pointer">
                             <img src="${product.img}" alt="${product.title}" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-transform duration-700" onerror="this.src='https://placehold.co/600x800/1e1a17/faf9f5?text=${encodeURIComponent(product.title)}'">
                             
@@ -1044,17 +1070,21 @@
                         <div class="flex flex-col flex-grow justify-between">
                             <div>
                                 <span class="text-[10px] font-bold tracking-[0.2em] text-brandRed uppercase block mb-1">
-                                    ${product.category === 'dress' ? '100% Cotton Dress' : '100% Cotton Top / Tunic'}
+                                    ${product.category === 'dress' ? '100% Cotton Dress / Kamis' : product.category === 'kids' ? 'Kids Dress Collection' : '100% Cotton Top / Libs'}
                                 </span>
                                 <h3 class="font-serif text-2xl italic text-charcoal mb-2 group-hover:text-brandRed transition-colors">
                                     ${product.title}
                                 </h3>
+                                <!-- Delivery notice on every item -->
+                                <p class="text-[10px] text-emerald-700 font-bold tracking-widest uppercase mb-2 flex items-center gap-1">
+                                    <i class="fa-solid fa-truck-fast"></i> Addis Ababa Delivery Available
+                                </p>
                                 <p class="text-xs text-charcoal/70 line-clamp-2 leading-relaxed font-serif italic mb-6">
                                     ${product.desc}
                                 </p>
                             </div>
 
-                            <button class="w-full py-3 bg-charcoal text-pearl text-[10px] tracking-widest uppercase font-bold hover:bg-brandRed transition-colors flex items-center justify-center gap-2">
+                            <button class="w-full py-3.5 bg-charcoal text-pearl text-[10px] tracking-widest uppercase font-bold hover:bg-brandRed transition-colors flex items-center justify-center gap-2 rounded">
                                 View Product Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
                         </div>
@@ -1079,15 +1109,15 @@
             }
 
             document.getElementById('detail-title').innerText = product.title;
-            document.getElementById('detail-category-label').innerText = product.category === 'dress' ? 'Handwoven Cotton Dress' : product.category === 'kids' ? 'Handwoven Kids Dress' : 'Handwoven Cotton Tunic';
+            document.getElementById('detail-category-label').innerText = product.category === 'dress' ? 'Handwoven Cotton Dress / Kamis' : product.category === 'kids' ? 'Handwoven Kids Dress' : 'Handwoven Cotton Top / Libs';
             document.getElementById('detail-desc').innerText = product.desc;
             document.getElementById('detail-badge').innerText = product.badge;
 
             // Pre-fill messaging buttons with the requested item name & updated Eyerus WhatsApp & Telegram
-            const waMsg = encodeURIComponent(`Hello Eyerus, I am interested in inquiring about ordering '${product.title}' (100% Cotton) from Jerry Design.`);
+            const waMsg = encodeURIComponent(`Hello Eyerus, I am interested in inquiring about ordering '${product.title}' (100% Cotton) from Jerry Design with Addis Ababa delivery.`);
             document.getElementById('detail-whatsapp-btn').href = `https://wa.me/251911698369?text=${waMsg}`;
             
-            const tgMsg = encodeURIComponent(`Hello Eyerus, I am interested in ordering '${product.title}' from Jerry Design.`);
+            const tgMsg = encodeURIComponent(`Hello Eyerus, I am interested in ordering '${product.title}' from Jerry Design with Addis Ababa delivery.`);
             document.getElementById('detail-telegram-btn-1').href = `https://t.me/Jerryeyerus23?text=${tgMsg}`;
 
             navigateTo('detail');
@@ -1118,4 +1148,4 @@
         });
     </script>
 </body>
-</html>
+</html>\
